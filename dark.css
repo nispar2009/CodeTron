@@ -1,0 +1,350 @@
+/* Generated using SpectrumStylr Beta */
+
+@import url("https://fonts.googleapis.com/css?family=Bitter");
+
+body {
+    font-family: Bitter;
+    margin: 0;
+    font-size: 18px;
+    background-color: #242424;
+    color: white;
+}
+
+.btn {
+    padding: 10px 25px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    user-select: none;
+    text-decoration: none;
+    color: #242424;
+    outline: none;
+    background-color: lightgrey;
+    border-radius: 100px;
+}
+
+.btn:hover {
+    transition: 0.2s;
+    background-color: grey;
+}
+
+.btn.btn-danger {
+    background-color: red;
+}
+
+.btn-danger:hover {
+    background-color: #e00000;
+}
+
+.btn.btn-warning {
+    background-color: gold;
+}
+
+.btn-warning:hover {
+    background-color: goldenrod;
+}
+
+.btn.btn-success {
+    background-color: rgb(143, 255, 17);
+}
+
+.btn-success:hover {
+    background-color: rgb(133, 215, 7);
+}
+
+.btn.btn-info {
+    background-color: dodgerblue;
+}
+
+.btn-info:hover {
+    background-color: rgb(0, 105, 205);
+}
+
+.section-bg {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: lightgrey;
+}
+
+.section-blank {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: none;
+}
+
+h1.heading {
+    color: dodgerblue;
+}
+
+h2.heading {
+    color: lightgrey;
+}
+
+.footer {
+    width: 100%;
+    display: block;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: lightgrey;
+}
+
+.footer .footer-link {
+    color: #4f4f4f;
+}
+
+.footer .footer-link:hover {
+    transition: 0.2s;
+    color: black;
+}
+
+.nav-desktop {
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    top: 0;
+    background-color: #4f4f4f;
+    border-bottom: 2px solid dodgerblue;
+}
+
+.nav-desktop-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 60px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+}
+
+.nav-desktop-link:hover {
+    color: dodgerblue;
+}
+
+.nav-desktop-item {
+    display: inline;
+}
+
+.nav-desktop-brand {
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+.form {
+    outline: none;
+    background-color: grey;
+    border: none;
+    border-bottom: 2px solid dodgerblue;
+    border-radius: 10px;
+}
+
+input.form {
+    height: 50px;
+    width: 300px;
+    font-size: large;
+}
+
+textarea.form {
+    width: 300px;
+    font-size: large;
+    height: 100px;
+    resize: none;
+}
+
+select.form {
+    height: 50px;
+    width: 300px;
+    font-size: large;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+        overflow: hidden;
+    }
+
+    input.form {
+        width: 300px;
+    }
+
+    select.form {
+        width: 300px;
+    }
+
+    textarea.form {
+        width: 300px;
+    }
+
+    table.table td,
+    table.table th {
+        padding: 10px 25px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .nav-mobile {
+        display: none
+    }
+
+    table.table td,
+    table.table th {
+        padding: 10px 50px;
+    }
+}
+
+.nav-mobile-brand {
+    float: left;
+    font-size: 40px;
+    color: #4f4f4f;
+    text-decoration: none;
+}
+
+.nav-mobile-right {
+    float: right
+}
+
+.nav-mobile-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    /* right: 0; */
+    background-color: black;
+    border-bottom: 2px solid dodgerblue;
+}
+
+.nav-mobile-right .nav-mobile-content {
+    right: 0;
+}
+
+.nav-mobile-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-mobile-brand:active {
+    color: black;
+}
+
+.hover-all {
+    display: inline-block;
+}
+
+.hover-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    background-color: #4f4f4f;
+    color: white;
+    border-bottom: 2px solid dodgerblue;
+}
+
+.hover-all:hover .hover-content {
+    display: block;
+}
+
+.hover-all .hover-content .hover-link:hover {
+    color: lightgrey;
+    transition: 0.2s;
+}
+
+.hover-all .hover-content .hover-link {
+    color: white;
+    font-display: block;
+}
+
+table.table {
+    border-collapse: collapse;
+}
+
+table.table td {
+    border: none;
+    text-align: center;
+}
+
+table.table tr:nth-child(even) {background-color: grey; color: white}
+table.table tr:nth-child(odd) {background-color: white; color: black}
+
+table.table th {
+    border: none;
+    text-align: center;
+    background-color: #4f4f4f;
+    color: dodgerblue;
+}
+
+.col {
+    column-count: 2;
+}
+
+.n-m-show {
+    display: block
+}
+
+input[type=radio].form {
+    width: initial;
+    height: initial;
+}
+
+input[type=checkbox].form {
+    width: initial;
+    height: initial;
+}
+
+.link {
+    color: #4f4f4f;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: black;
+}
+
+.card {
+    width: 40%;
+    display: inline-block;
+    transition: 0.2s;
+    border-radius: 20px;
+    border: 2px solid dodgerblue;
+    padding: 10px;
+}
+
+.line {
+    border-top: 2px solid grey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.tut {
+    display: none;
+}
+.tut:target {
+    display: block;
+}
+
+.template {
+    display: none;
+}
+.template:target {
+    display: block;
+}

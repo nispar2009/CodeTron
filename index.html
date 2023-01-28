@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dark.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="nav-desktop" style="text-align: center;">
+        <img src="logo.png" alt="CodeTron">
+    </div>
+
+    <h1 class="heading">Meet CodeTron</h1>
+    <h2 class="heading">&mdash;your new favorite programming language!</h2>
+
+    <div class="line"></div>
+
+    <p>Enter your code below and immediately see the output. We also have templates which allow you to get readymade
+        code for each output. We allow you to create a maximum of 5 variables&mdash;namely "1", "2", "3", "4", and "5".
+        You can even give outputs of variables using "&lt;&gt;" or custom messages using the ">" method. You can even
+        create conditionals. Learn how to use it with our docs.</p>
+
+    <button class="btn btn-success" onclick="run()">Run Code</button>
+    <button class="btn btn-danger" onclick="cls()">Clear terminal</button>
+    <button class="btn btn-warning" onclick="purgeVars()">Purge variables</button>
+
+    <br><br>
+
+    <input type="text" id="code" class="form" title="Enter code">
+
+    <br><br>
+
+    <div class="card">
+        Terminal
+        <ul id="output"></ul>
+    </div>
+
+    <div class="line"></div>
+
+    <h2 class="heading">Templates</h2>
+    <button class="btn" onclick="setTemplate('auth'); window.location.replace('#auth')">Authentication</button>
+    <button class="btn" onclick="setTemplate('name'); window.location.replace('#name')">Greeting</button>
+    <button class="btn" onclick="setTemplate('hw'); window.location.replace('#hw')">Hello, world!</button>
+    <button class="btn" onclick="setTemplate('error'); window.location.replace('#error')">See what a syntax error looks like</button>
+    <br><br>
+    <div class="template" id="auth">
+        <code>
+            1=Some username<br>
+            2=Some password<br>
+            2/Any password<br>
+            >Logged in.<br>
+            2/Some password<br>
+            >Logged in.
+        </code>
+    </div>
+    <div class="template" id="name">
+        <code>
+            1=Nisanth Parupalli<br>
+            >Hello, <br>
+            &lt;1>
+        </code>
+    </div>
+    <div class="template" id="hw">
+        <code>
+            >Hello, world!
+        </code>
+    </div>
+    <div class="template" id="error">
+        <code>
+            This is wrong syntax
+        </code>
+    </div>
+
+    <div class="line"></div>
+
+    <h2 class="heading">Docs</h2>
+
+    <button class="btn btn-info" onclick="window.location.replace('#run')">Features</button>
+    <button class="btn btn-info" onclick="window.location.replace('#setVar')">Set variables</button>
+    <button class="btn btn-info" onclick="window.location.replace('#returnVar')">Return variables</button>
+    <button class="btn btn-info" onclick="window.location.replace('#return')">Return text</button>
+    <button class="btn btn-info" onclick="window.location.replace('#if')">Conditionals</button>
+
+    <br><br>
+
+    <div class="tut" id="run">
+        <p>
+            Running your code is no big deal on CodeTron.
+            Just click the <button class="btn btn-success">Run Code</button> button above the code field.
+            Use <button class="btn btn-danger">Clear terminal</button> to completely clear the output terminal.
+            Use <button class="btn btn-warning">Purge variables</button> to reset all variables.
+        </p>
+    </div>
+    <div class="tut" id="setVar">
+        <p>
+            You can create a maximum of five variables at a time.
+            You can give each variable a string value.
+            It is also possible to change the value of a variable using the same syntax as creating it.
+            Use the following code.
+        </p>
+        <code>1=Hello, world!</code>
+        <p>Here, variable 1 is being set to "Hello, world!". Do the same by replacing "1" with "2", "3", "4", or "5".
+            Change the right side of the = to give the variable a different value.</p>
+    </div>
+    <div class="tut" id="returnVar">
+        <p>
+            One can also return the value of a variable.
+            Just surround the variable you want to return with &lt;>.
+        </p>
+        <code>&lt;1></code>
+        <p>This will return the value of variable 1. Replace 1 with the other variables to get their value.</p>
+    </div>
+    <div class="tut" id="return">
+        <p>
+            Custom text can also be returned using the below code.
+        </p>
+        <code>>Hello, world!</code>
+        <p>This will return "Hello, world!" Change the part after the > to edit the message.</p>
+    </div>
+    <div class="tut" id="if">
+        <p>
+            Creating conditionals is also easy on CodeTron.
+            First enter the name of the variable you want to compare.
+            Then add a / and the after it, the value you want to compare it with.
+            Then, enter the code that will run if the condition is true.
+            However, watch out! One conditional can only have one output.
+        </p>
+        <code>
+            1/Hello
+            &lt;1>
+            >Hello
+        </code>
+        <p>
+            This will return the value of variable 1 if it is equal to "Hello".
+            And, irrespective of whether the condition is true or false, we will then get "Hello".
+        </p>
+    </div>
+</body>
+
+</html>
