@@ -104,7 +104,7 @@ decipher = code => {
                 }
             }
 
-            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(1, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(1, " + counter + ")' type='submit' class='btn btn-info'>Submit</button>"
             document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
             counter++
         }
@@ -121,7 +121,7 @@ decipher = code => {
                 }
             }
 
-            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(2, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(2, " + counter + ")' type='submit' class='btn btn-info'>Submit</button>"
             document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
             counter++
         }
@@ -138,7 +138,7 @@ decipher = code => {
                 }
             }
 
-            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(3, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(3, " + counter + ")' type='submit' class='btn btn-info'>Submit</button>"
             document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
             counter++
         }
@@ -155,7 +155,7 @@ decipher = code => {
                 }
             }
 
-            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(4, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(4, " + counter + ")' type='submit' class='btn btn-info'>Submit</button>"
             document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
             counter++
         }
@@ -172,7 +172,7 @@ decipher = code => {
                 }
             }
 
-            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(5, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(5, " + counter + ")' type='submit' class='btn btn-info'>Submit</button>"
             document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
             counter++
         }
