@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CodeTron</title>
     <link rel="stylesheet" href="dark.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <script src="script.js"></script>
@@ -27,9 +27,11 @@
         You can even give outputs of variables using "&lt;&gt;" or custom messages using the ">" method. You can even
         create conditionals. Learn how to use it with our docs.</p>
 
-    <button class="btn btn-success" onclick="run()">Run Code</button>
-    <button class="btn btn-danger" onclick="cls()">Clear terminal</button>
-    <button class="btn btn-warning" onclick="purgeVars()">Purge variables</button>
+    <div id="control">
+        <button class="btn btn-success" onclick="run()">Run Code</button>
+        <button class="btn btn-danger" onclick="cls()">Clear terminal</button>
+        <button class="btn btn-warning" onclick="purgeVars()">Purge variables</button>
+    </div>
 
     <br><br>
 
@@ -45,24 +47,24 @@
     <div class="line"></div>
 
     <h2 class="heading">Templates</h2>
-    <button class="btn" onclick="setTemplate('auth'); window.location.replace('#auth')">Authentication</button>
-    <button class="btn" onclick="setTemplate('name'); window.location.replace('#name')">Greeting</button>
-    <button class="btn" onclick="setTemplate('hw'); window.location.replace('#hw')">Hello, world!</button>
-    <button class="btn" onclick="setTemplate('error'); window.location.replace('#error')">See what a syntax error looks like</button>
+    <button class="btn" onclick="window.location.replace('#auth')">Authentication</button>
+    <button class="btn" onclick="window.location.replace('#name')">Greeting</button>
+    <button class="btn" onclick="window.location.replace('#hw')">Hello, world!</button>
+    <button class="btn" onclick="window.location.replace('#error')">See what a syntax error looks
+        like</button>
     <br><br>
     <div class="template" id="auth">
         <code>
-            1=Some username<br>
-            2=Some password<br>
-            2/Any password<br>
+            1?What is the password?<br>
+            1/Some random example password<br>
             >Logged in.<br>
-            2/Some password<br>
+            1/Some wrong password<br>
             >Logged in.
         </code>
     </div>
     <div class="template" id="name">
         <code>
-            1=Nisanth Parupalli<br>
+            1?What is your name?<br>
             >Hello, <br>
             &lt;1>
         </code>
@@ -87,6 +89,7 @@
     <button class="btn btn-info" onclick="window.location.replace('#returnVar')">Return variables</button>
     <button class="btn btn-info" onclick="window.location.replace('#return')">Return text</button>
     <button class="btn btn-info" onclick="window.location.replace('#if')">Conditionals</button>
+    <button class="btn btn-info" onclick="window.location.replace('#inp')">User input</button>
 
     <br><br>
 
@@ -140,6 +143,24 @@
         <p>
             This will return the value of variable 1 if it is equal to "Hello".
             And, irrespective of whether the condition is true or false, we will then get "Hello".
+        </p>
+    </div>
+    <div class="tut" id="inp">
+        <p>
+            Is is also possible to get user input on CodeTron.
+            After typing this code, a text box appears in the terminal to enter an answer.
+            After the ?, add the question the user should answer.
+            This will be displayed as a tooltip in the text box.
+            The user's input will be stored as a variable.
+            Use the below code.
+        </p>
+        <code>
+            1?Some random question
+        </code>
+        <p>
+            Until an answer is entered in the terminal, one cannot run more code.
+            Above, the part before the ? is the variable and the part after is the title of the question.
+            Try changing the "1" in the code above to save the input in a different variable.
         </p>
     </div>
 </body>

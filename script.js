@@ -1,5 +1,6 @@
 let var1, var2, var3, var4, var5
 let allowed = true
+let counter = 1
 
 decipher = code => {
     let msg = "Syntax error"
@@ -89,6 +90,91 @@ decipher = code => {
             var5 = varVal
 
             msg = "Variable 5 has been set to '" + var5 + "'."
+        }
+        if ((code[0] + code[1] == "1?")) {
+            let varLocated, varAssigned, varVal
+            varVal = ""
+
+            for (const iterator of code) {
+                if ((varLocated != true) | (varAssigned != true)) {
+                    if (iterator == "1") { varLocated = true }
+                    if (iterator == "?") { varAssigned = true }
+                } else {
+                    varVal += iterator
+                }
+            }
+
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(1, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
+            counter++
+        }
+        if ((code[0] + code[1] == "2?")) {
+            let varLocated, varAssigned, varVal
+            varVal = ""
+
+            for (const iterator of code) {
+                if ((varLocated != true) | (varAssigned != true)) {
+                    if (iterator == "2") { varLocated = true }
+                    if (iterator == "?") { varAssigned = true }
+                } else {
+                    varVal += iterator
+                }
+            }
+
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(2, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
+            counter++
+        }
+        if ((code[0] + code[1] == "3?")) {
+            let varLocated, varAssigned, varVal
+            varVal = ""
+
+            for (const iterator of code) {
+                if ((varLocated != true) | (varAssigned != true)) {
+                    if (iterator == "3") { varLocated = true }
+                    if (iterator == "?") { varAssigned = true }
+                } else {
+                    varVal += iterator
+                }
+            }
+
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(3, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
+            counter++
+        }
+        if ((code[0] + code[1] == "4?")) {
+            let varLocated, varAssigned, varVal
+            varVal = ""
+
+            for (const iterator of code) {
+                if ((varLocated != true) | (varAssigned != true)) {
+                    if (iterator == "4") { varLocated = true }
+                    if (iterator == "?") { varAssigned = true }
+                } else {
+                    varVal += iterator
+                }
+            }
+
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(4, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
+            counter++
+        }
+        if ((code[0] + code[1] == "5?")) {
+            let varLocated, varAssigned, varVal
+            varVal = ""
+
+            for (const iterator of code) {
+                if ((varLocated != true) | (varAssigned != true)) {
+                    if (iterator == "5") { varLocated = true }
+                    if (iterator == "?") { varAssigned = true }
+                } else {
+                    varVal += iterator
+                }
+            }
+
+            msg = "<input type='text' style='background-color: transparent; color: white' class='form' id='" + counter + "' title='" + varVal + "'><button onclick='submit(5, " + counter + ")' type='submit' class='btn btn-success'>Submit</button>"
+            document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()" disabled>Run Code</button><button class="btn btn-danger" onclick="cls()" disabled>Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()" disabled>Purge variables</button>'
+            counter++
         }
         if (code[0] == ">") {
             let returnActivated, varVal
@@ -212,22 +298,11 @@ purgeVars = () => {
     var5 = null
 }
 
-setTemplate = type => {
-    if (type == "hw") {document.getElementById("code").value = ">Hello, world!"; run()}
-    if (type == "name") {document.getElementById("code").value = "1=Nisanth Parupalli"; run(); document.getElementById("code").value = ">Hello, "; run(); document.getElementById("code").value = "<1>"; run()}
-    if (type == "auth") {
-        document.getElementById("code").value = "1=Some username"
-        run()
-        document.getElementById("code").value = "2=Some password"
-        run()
-        document.getElementById("code").value = "2/Any password"
-        run()
-        document.getElementById("code").value = ">Logged in."
-        run()
-        document.getElementById("code").value = "2/Some password"
-        run()
-        document.getElementById("code").value = ">Logged in."
-        run()
-    }
-    if (type == "error") {document.getElementById("code").value = "This is wrong syntax"; run()}
+submit = (variable, text) => {
+    if (variable == 1) {var1 = (document.getElementById(text.toString()).value)}
+    if (variable == 2) {var2 = (document.getElementById(text.toString()).value)}
+    if (variable == 3) {var3 = (document.getElementById(text.toString()).value)}
+    if (variable == 4) {var4 = (document.getElementById(text.toString()).value)}
+    if (variable == 5) {var5 = (document.getElementById(text.toString()).value)}
+    document.getElementById("control").innerHTML = '<button class="btn btn-success" onclick="run()">Run Code</button><button class="btn btn-danger" onclick="cls()">Clear terminal</button><button class="btn btn-warning" onclick="purgeVars()">Purge variables</button>'
 }
